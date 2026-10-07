@@ -16,7 +16,7 @@
 
 4. Hypothesis Username
 
-My Hypothesis username is: `YOUR_HYPOTHESIS_USERNAME`
+My Hypothesis username is: `RuiiiYang`
 
 5. AI Tool/Workflow
 
