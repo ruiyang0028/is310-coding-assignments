@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greek Mythology Cultural Data Collection</title>
+
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: #f4f1ea;
+            color: #2f2f2f;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #6b4f2a;
+            text-align: center;
+        }
+
+        h2 {
+            color: #6b4f2a;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-section {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #6b4f2a;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4f391e;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .records {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .record {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .record h3 {
+            margin-top: 0;
+            color: #6b4f2a;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Greek Mythology Cultural Data Collection</h1>
+
+    <div class="intro">
+        <p>
+            This interface collects cultural data about Greek mythology.
+            Enter information about a myth, its main figure, and its cultural theme.
+        </p>
+    </div>
+
+    <div class="form-section">
+
+        <h2>Add a Greek Mythology Story</h2>
+
+        <form id="mythForm">
+
+            <label for="title">Title of the Myth</label>
+            <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Example: The Myth of Achilles and Penthesilea"
+                required
+            >
+
+            <label for="figure">Main Figure or Character</label>
+            <input
+                type="text"
+                id="figure"
+                name="figure"
+                placeholder="Example: Achilles"
+                required
+            >
+
+            <label for="theme">Main Theme or Cultural Meaning</label>
+            <input
+                type="text"
+                id="theme"
+                name="theme"
+                placeholder="Example: Heroism, conflict, and tragedy"
+                required
+            >
+
+            <button type="submit">Add Myth</button>
+
+        </form>
+
+        <div id="message"></div>
+
+    </div>
+
+    <div class="records">
+
+        <h2>Collected Mythology Records</h2>
+
+        <div id="recordList"></div>
+
+        <div class="download-section">
+            <button id="downloadButton">Download Data as JSON</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        // Pre-created example data, matching the Python CLI application.
+        let mythologyData = [
+            {
+                title: "The Myth of Persephone",
+                figure: "Persephone",
+                theme: "Death, rebirth, and the changing seasons"
+            },
+            {
+                title: "The Myth of Theseus and the Minotaur",
+                figure: "Theseus",
+                theme: "Heroism, courage, and overcoming danger"
+            },
+            {
+                title: "The Myth of Heracles",
+                figure: "Heracles",
+                theme: "Strength, perseverance, and redemption"
+            }
+        ];
+
+        // Display all records on the page.
+        function displayRecords() {
+
+            const recordList = document.getElementById("recordList");
+
+            recordList.innerHTML = "";
+
+            mythologyData.forEach(function(myth) {
+
+                const record = document.createElement("div");
+                record.className = "record";
+
+                record.innerHTML = `
+                    <h3>${myth.title}</h3>
+                    <p><strong>Main Figure:</strong> ${myth.figure}</p>
+                    <p><strong>Theme:</strong> ${myth.theme}</p>
+                `;
+
+                recordList.appendChild(record);
+            });
+        }
+
+        // Handle the form submission.
+        document.getElementById("mythForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const title = document.getElementById("title").value.trim();
+            const figure = document.getElementById("figure").value.trim();
+            const theme = document.getElementById("theme").value.trim();
+
+            const message = document.getElementById("message");
+
+            // Basic validation to make sure required fields are not empty.
+            if (title === "" || figure === "" || theme === "") {
+                message.textContent = "Please complete all three fields.";
+                message.style.color = "red";
+                return;
+            }
+
+            // Create a new mythology record.
+            const newMyth = {
+                title: title,
+                figure: figure,
+                theme: theme
+            };
+
+            // Add the new record to the collection.
+            mythologyData.push(newMyth);
+
+            // Display the updated collection.
+            displayRecords();
+
+            // Show confirmation message.
+            message.textContent = "Myth added successfully!";
+            message.style.color = "green";
+
+            // Clear the form.
+            document.getElementById("mythForm").reset();
+        });
+
+        // Download the collected data as a JSON file.
+        document.getElementById("downloadButton").addEventListener("click", function() {
+
+            const jsonData = JSON.stringify(mythologyData, null, 2);
+
+            const blob = new Blob([jsonData], {
+                type: "application/json"
+            });
+
+            const url = URL.createObjectURL(blob);
+
+            const link = document.createElement("a");
+
+            link.href = url;
+            link.download = "greek_mythology_data.json";
+
+            link.click();
+
+            URL.revokeObjectURL(url);
+        });
+
+        // Display the initial records when the page loads.
+        displayRecords();
+
+    </script>
+
+</body>
+</html>
