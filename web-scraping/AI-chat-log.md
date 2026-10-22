@@ -20,4 +20,4 @@ Can you review my README and check whether it meets the assignment requirements?
 
 AI response summary:
 
-The AI compared my README with the assignment checklist and pointed out that I needed to explain the website rules more clearly, make the Data Collection section match the columns actually saved in my CSV, and include a reflection on what my measurements mean and their limitations.
+The AI compared my README with the assignment checklist and pointed out that I needed to explain the website rules more clearly
