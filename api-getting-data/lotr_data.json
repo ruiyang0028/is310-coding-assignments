@@ -1,0 +1,101 @@
+{
+    "batchcomplete": "",
+    "continue": {
+        "sroffset": 10,
+        "continue": "-||"
+    },
+    "query": {
+        "search": [
+            {
+                "ns": 0,
+                "title": "Gandalf",
+                "pageid": 11331,
+                "size": 104897,
+                "wordcount": 16915,
+                "snippet": "",
+                "timestamp": "2026-10-15T18:13:00Z"
+            },
+            {
+                "ns": 0,
+                "title": "Glamdring",
+                "pageid": 498,
+                "size": 9075,
+                "wordcount": 1188,
+                "snippet": "",
+                "timestamp": "2026-02-10T00:14:56Z"
+            },
+            {
+                "ns": 0,
+                "title": "Wizard's staff",
+                "pageid": 6958,
+                "size": 18441,
+                "wordcount": 3092,
+                "snippet": "",
+                "timestamp": "2025-09-22T00:17:59Z"
+            },
+            {
+                "ns": 0,
+                "title": "White Council",
+                "pageid": 2337,
+                "size": 11704,
+                "wordcount": 1635,
+                "snippet": "",
+                "timestamp": "2025-12-01T23:35:05Z"
+            },
+            {
+                "ns": 0,
+                "title": "Gandalf the White (soundtrack)",
+                "pageid": 37603,
+                "size": 788,
+                "wordcount": 109,
+                "snippet": "",
+                "timestamp": "2023-07-28T23:00:04Z"
+            },
+            {
+                "ns": 0,
+                "title": "Battle of the Peak",
+                "pageid": 9418,
+                "size": 7656,
+                "wordcount": 1008,
+                "snippet": "",
+                "timestamp": "2026-04-22T20:01:24Z"
+            },
+            {
+                "ns": 0,
+                "title": "The Lord of the Rings: The Fellowship of the Ring",
+                "pageid": 10919,
+                "size": 51498,
+                "wordcount": 7812,
+                "snippet": "",
+                "timestamp": "2026-09-18T22:39:33Z"
+            },
+            {
+                "ns": 0,
+                "title": "Frodo's Song",
+                "pageid": 6383,
+                "size": 1962,
+                "wordcount": 302,
+                "snippet": "",
+                "timestamp": "2026-01-17T23:39:30Z"
+            },
+            {
+                "ns": 0,
+                "title": "Narya",
+                "pageid": 490,
+                "size": 6267,
+                "wordcount": 899,
+                "snippet": "",
+                "timestamp": "2026-09-21T02:04:23Z"
+            },
+            {
+                "ns": 0,
+                "title": "Gwaihir",
+                "pageid": 3887,
+                "size": 8712,
+                "wordcount": 1288,
+                "snippet": "",
+                "timestamp": "2025-08-27T22:05:19Z"
+            }
+        ]
+    }
+}

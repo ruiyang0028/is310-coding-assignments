@@ -1,0 +1,61 @@
+{
+    "total": 68934,
+    "search_query": "painting",
+    "paintings": [
+        {
+            "objectID": 490190,
+            "title": "Painting",
+            "artist": null,
+            "date": "1952",
+            "medium": "Oil on canvas",
+            "department": "Modern and Contemporary Art",
+            "culture": "",
+            "country": "",
+            "primaryImage": ""
+        },
+        {
+            "objectID": 670172,
+            "title": "Painting",
+            "artist": null,
+            "date": "1784 (?)",
+            "medium": "Stipple engraving",
+            "department": "Drawings and Prints",
+            "culture": "",
+            "country": "",
+            "primaryImage": "https://images.metmuseum.org/CRDImages/dp/original/DP841153.jpg"
+        },
+        {
+            "objectID": 313787,
+            "title": "Painting",
+            "artist": null,
+            "date": "mid-20th century",
+            "medium": "Sago palm petiole, bamboo, fiber, paint",
+            "department": "The Michael C. Rockefeller Wing",
+            "culture": "Kambot people",
+            "country": "Papua New Guinea",
+            "primaryImage": ""
+        },
+        {
+            "objectID": 483042,
+            "title": "Painting",
+            "artist": null,
+            "date": "1927",
+            "medium": "Tempera and oil on canvas",
+            "department": "Modern and Contemporary Art",
+            "culture": "",
+            "country": "",
+            "primaryImage": ""
+        },
+        {
+            "objectID": 488660,
+            "title": "Painting",
+            "artist": null,
+            "date": "1950",
+            "medium": "Oil on canvas",
+            "department": "Modern and Contemporary Art",
+            "culture": "",
+            "country": "",
+            "primaryImage": ""
+        }
+    ]
+}
